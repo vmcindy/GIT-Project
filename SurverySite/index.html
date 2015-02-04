@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Survey Site</title>
+
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="lib/angular/angular-animate.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style type="text/css">
+.surveyform {
+  padding: 15px 15px;
+  margin-bottom: 30px;
+  background-color: #CCCCCC;
+  font-family: "Courier New Bold"
+}
+.surveyform .input-style{
+  width:100%; 
+  min-width:150px; 
+  max-width:280px;
+}
+.container .surveyform,
+.container-fluid .surveyform {
+  border-radius: 6px;
+}
+.surveyform .container {
+  max-width: 100%;
+}
+body {  
+min-width:250px; 
+}
+.table {
+  border-radius: 10px;
+}
+.table-hover > tbody > tr:hover {
+  background-color: #E6E6E6;
+}
+.borderless td,table.borderless th{
+     border: none !important;
+}
+</style>
+
+</head>
+<body>
+<body style="background-color: #8F8F8F">
+<div class="container-fluid container">
+  <div class="main" ng-view>
+  </div>
+</div>
+  
+</body>
+</html>

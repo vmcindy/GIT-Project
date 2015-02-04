@@ -1,0 +1,64 @@
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/list" target="_self">XYZ Auto</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#/list" target="_self"><i class="fa fa-users"></i>&nbsp;Customers List</a></li>
+              <li><a href="#/newform" target="_self"><i class="fa fa-plus-square"></i>&nbsp;New Form</a></li>
+            </ul>
+          </div>
+  </nav>
+  <div style="padding-top: 70px"></div>
+  <form id="survey-Form" method="get" action="" role="form">
+    <div class="surveyform">
+      <div class="search">
+              <h2>Customers List</h2>
+              <div class="row form-group">
+                <div class="col-xs-10 col-sm-8 col-md-6 col-lg-4"><input ng-model="query" placeholder="Search for Customers" autofocus></input></div>
+              </div>
+              <div class="row form-group ">
+                <div class="col-sm-4 col-md-3 col-lg-2 ">
+                  <label class="formgroup">Sort by: &nbsp;
+                    <select ng-model="customerOrder">
+                      <option value="name">Name</option>
+                      <option value="email">Email</option>
+                      <option value="age">Age</option>
+                      <option value="address">Address</option>
+                      <option value="gender">Gender</option>
+                    </select>
+                  </label>
+                </div>
+                  <div class="radio col-sm-4 col-md-3 col-lg-4" >
+                      <label class="formgroup">
+                        <input type="radio" ng-model="direction" name="direction" >Ascending</input>
+                      </label>
+                      <label class="formgroup">
+                        <input type="radio" ng-model="direction" name="direction" value="reverse">Descending</input>
+                      </label>
+                  </div>
+              </div>
+      </div>
+      <div class="table table-responsive">
+            <table id="tblCustomer" border="1" cellspacing="1" cellpadding="5" class="table table-hover table-condensed borderless customerlist">
+              <thead><tr id="tblHead" class="customer cf"><th>Name</th><th>Email</th><th>Age</th><th>Address</th><th>Gender</th></tr></thead>
+              <tbody>
+                <tr class="customer cf" ng-animate="animate" ng-repeat="person in customers | filter: query | orderBy:customerOrder:direction">
+                  <td><a href="#/details/{{customers.indexOf(person)}}">{{person.name}}</a></td>
+                  <td>{{person.email}}</td>
+                  <td>{{person.age}}</td>
+                  <td>{{person.address}}</td>
+                  <td>{{person.gender}}</td>
+                </tr>
+              </tbody>
+            </table>       
+      </div>
+    </div>
+  </form>

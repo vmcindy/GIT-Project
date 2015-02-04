@@ -1,0 +1,64 @@
+	<nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/list.html" target="_self">XYZ Auto</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+            	<li><a href="#/list" target="_self"><i class="fa fa-users"></i>&nbsp;Customers List</a></li>
+            	<li><a href="#/newform" target="_self"><i class="fa fa-plus-square"></i>&nbsp;New Form</a></li>
+            </ul>
+          </div>
+  </nav>
+  <div style="padding-top: 70px;"></div>
+		<form id="survey-Form" method="get" action="" role="form">
+				<div class="surveyform">
+					<div class="row form-group" style="text-align:center;">
+						<div class="col-sm-12 col-md-12 col-lg-12"><h3>Customer Details</h3></div>
+					</div>
+					<div class="row form-group">
+						<div class="col-xs-4 col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Name</div>
+						<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"><input type="email" name="email" id="txt-email" class="form-control input-style" required  disabled value={{customers[whichPerson].name}}></input></div>
+					</div>
+					<div class="row form-group">
+						<div class="col-xs-4 col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Email ID</div>
+						<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"><input type="email" name="email" id="txt-email" class="form-control input-style" required disabled value={{customers[whichPerson].email}}></div>            
+					</div>
+					<div class="row form-group">
+						<div class="col-xs-4 col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Age</div>
+						<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"><input type="number" name="age" id="txt-age" min="1" max="100" class="form-control input-style" required disabled value={{customers[whichPerson].age}}></input></div>
+					</div>
+					<div class="row form-group">        
+						<div class="col-xs-4 col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Address</div>
+						<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4"><input type="text" name="address" id="txt-address" class="form-control input-style" required disabled value={{customers[whichPerson].address}}></input></div>
+					</div>
+					<div class="row form-group">
+						<div class="col-xs-4 col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Gender</div>
+						<div class="radio col-xs-6 col-sm-4 col-md-4 col-lg-4 "> Work on this - {{customers[whichPerson].gender}}
+							<script>
+							if ({{customers[whichPerson].address}}=='Male') {
+								document.write('<div class="col-xs-offset-2"><label><input type="radio" name="rb-gender"  id="rb-male" value="Male" required disabled checked>Male</input></label></div><div class="col-xs-offset-2"><label><input type="radio" name="rb-gender"  id="rb-female" value="Female" required disabled >Female</input></label></div>');
+							} else if ({{customers[whichPerson].address}}=='Female') {
+								document.write('<div class="col-xs-offset-2"><label><input type="radio" name="rb-gender"  id="rb-male" value="Male" required disabled>Male</input></label></div> <div class="col-xs-offset-2"><label><input type="radio" name="rb-gender"  id="rb-female" value="Female" required disabled checked>Female</input></label></div>');
+							} else {
+								document.write('<div class="col-xs-offset-2"><label><input type="radio" name="rb-gender"  id="rb-male" value="Male" required disabled>Male</input></label></div> <div class="col-xs-offset-2"><label><input type="radio" name="rb-gender"  id="rb-female" value="Female" required disabled>Female</input></label></div>');
+							}
+							
+							</script>
+						</div>
+					</div>
+							
+					<div class="row form-group" style="text-align:center;">
+						<div class="col-sm-8 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+							<a href="#/details/{{prevPerson}}" class="btn btn-left">&laquo;</a>
+							<a href="index.html" class="btn btn-right" style="width:150px">Back To search</a>
+			  				<a href="#/details/{{nextPerson}}" class="btn btn-right">&raquo;</a>
+			  			</div>
+					</div>
+		</form>	

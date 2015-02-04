@@ -1,0 +1,86 @@
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/list.html" target="_self">XYZ Auto</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#/list" target="_self"><i class="fa fa-users"></i>&nbsp;Customers List</a></li>
+              <li class="active"><a href="#/newform.html" target="_self"><i class="fa fa-plus-square"></i>&nbsp;New Form</a></li>
+            </ul>
+          </div>
+      </nav>
+    <div style="padding-top: 70px;"></div>
+    <div class="jumbotron" style="background-color: #CCCCCC">
+    <div class="col-md-offset-2 col-lg-offset-4" style="align:center"><h3><span>Customer Details</span></h3></div>
+    </div>
+    <form id="survey-Form" method="get" action="" role="form">
+
+        <div class="surveyform">
+          <div class="row form-group">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Name</div>
+            <div class="col-sm-4 col-md-4 col-lg-4"><input type="text" name="name" id="txt-name" class="form-control input-style" autofocus required></input>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Email ID</div>
+            <div class="col-sm-4 col-md-4 col-lg-4"><input type="email" name="email" id="txt-email" class="form-control input-style" required></input></div>            
+          </div>
+          <div class="row form-group">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Age</div>
+            <div class="col-sm-4 col-md-4 col-lg-4"><input type="number" name="age" id="txt-age" min="1" max="100" class="form-control input-style" required></input></div>
+          </div>
+          <div class="row form-group">        
+            <div class="col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Address</div>
+            <div class="col-sm-4 col-md-4 col-lg-4"><input type="text" name="address" id="txt-address" class="form-control input-style" required></input></div>
+          </div>
+          <div class="row form-group">
+            <div class="col-sm-6 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-1 col-lg-offset-2">Gender</div>
+            <div class="radio col-sm-4 col-md-4 col-lg-4 ">
+              <div><label><input type="radio" name="rb-gender"  id="rb-male" value="Male" required>Male</input></label></div>
+              <div><label><input type="radio" name="rb-gender"  id="rb-female" value="Female" required>Female</input></label></div>
+            </div>
+          </div>
+              
+          <div class="row form-group" style="text-align:center;">
+            <div class="col-sm-6 col-md-6 col-lg-4  col-sm-offset-3 col-md-offset-3 col-lg-offset-3">
+              <input type="submit" class="btn btn-primary btn-md" name="btn-submit" value="Submit" id="btn-submit" style="width:130px"/>
+              <input type="reset" class="btn btn-primary btn-md" name="btn_reset" value="Reset" id="btn_reset"style="width:130px"/>
+            </div>  
+          </div>
+        </div>
+    </form>   
+
+<script>
+$(document).ready(function(){
+});
+
+function genderChk(){
+      if(document.getElementById('rb-male').checked) {
+         genderValue=$("#rb-male").val();
+      }else if(document.getElementById('rb-female').checked) {
+    genderValue=$("#rb-female").val();
+      }
+    return genderValue;
+};
+
+$("#btn-submit").on('click',function(e){
+  var person1={
+  "userName":$("#txt-name").val(),
+  "email":$("#txt-email").val(), 
+  "age":$("#txt-age").val(), 
+  "address":$("#txt-address").val(), 
+  "gender": genderChk(),
+  };
+  surveyObj.person.push(person1);
+  console.log(surveyObj.person);
+  //e.preventDefault();
+});
+
+</script>
