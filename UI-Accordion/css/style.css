@@ -1,0 +1,122 @@
+.pageform {
+  padding: 15px 0;
+  margin-bottom: 30px;
+  background-color: #FFFFFF;
+  font-family: "Courier New Bold"
+}
+.container .pageform,
+.container-fluid .pageform {
+  border-radius: 6px;
+}
+.pageform .container {
+  max-width: 100%;
+}
+body {  
+min-width:250px; 
+}
+.tab, .tab-field, .open-tab {
+  padding: 15px 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  width :100%;
+  display: inline-block;
+  vertical-align: middle;
+  background: #FFFFFF;
+}
+.tab, .open-tab, .close-tab {
+  border-top: 1px solid #CCCCCC;
+  text-decoration: none;
+  color: #999999;
+  z-index: 10;
+  display: block;
+  opacity .9;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.lasttab {
+   border-bottom: 1px solid #CCCCCC;
+}
+.icon {
+  float:right;
+}
+.tab-field {
+  color: #CCC;
+}
+.open-tab {
+  color: #0066FF;
+}
+.close-tab {
+  color: #999999;
+}
+.tab:hover {
+  background-color: #EFEFEF;
+  text-decoration: none;
+  opacity 1;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+  border-bottom: 1px solid #CCCCCC;
+}
+.image {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.panel {
+  margin-bottom: 0;
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transition: .5s;
+}
+.rotate-reset {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: .5s;
+}
+ol {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+li {
+
+    background-position: 0px center; 
+    padding-left: 15px;
+}
+div menuitem {
+  padding: 8px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  width :100%;
+  display: inline-block;
+  vertical-align: middle;
+  background: #FFFFFF;
+  text-decoration: none;
+  color: #999999;
+  z-index: 10;
+  display: block;
+  opacity .9;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+menuitem:hover {
+  border-left: 1px solid #CCCCCC;
+  text-decoration: none;
+  opacity 1;
+   -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.floatingmenu {
+  position: relative;
+}
