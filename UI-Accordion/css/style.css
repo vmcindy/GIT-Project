@@ -2,7 +2,6 @@
   padding: 15px 0;
   margin-bottom: 30px;
   background-color: #FFFFFF;
-  font-family: "Courier New Bold"
 }
 .container .pageform,
 .container-fluid .pageform {
@@ -13,17 +12,17 @@
 }
 body {  
 min-width:250px; 
+font-family: 'Source Sans Pro', sans-serif;
 }
 .tab, .tab-field, .open-tab {
   padding: 15px 15px;
-  font-family: Arial, Helvetica, sans-serif;
   width :100%;
   display: inline-block;
   vertical-align: middle;
   background: #FFFFFF;
 }
 .tab, .open-tab, .close-tab {
-  border-top: 1px solid #CCCCCC;
+  border-top: 1px solid #EEEEEE;
   text-decoration: none;
   color: #999999;
   z-index: 10;
@@ -33,9 +32,10 @@ min-width:250px;
   -moz-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 .lasttab {
-   border-bottom: 1px solid #CCCCCC;
+   border-bottom: 1px solid #EEEEEE;
 }
 .icon {
   float:right;
@@ -44,20 +44,19 @@ min-width:250px;
   color: #CCC;
 }
 .open-tab {
-  color: #0066FF;
+  color: #33CCFF;
 }
 .close-tab {
   color: #999999;
 }
 .tab:hover {
-  background-color: #EFEFEF;
+  background-color: #F5F5F5;
   text-decoration: none;
   opacity 1;
-  -webkit-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-  border-bottom: 1px solid #CCCCCC;
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -ms-transform: scale(1.0);
+  transform: scale(1.0);
 }
 .image {
   margin-bottom: 20px;
@@ -72,14 +71,14 @@ min-width:250px;
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  transition: .5s;
+  transition: .3s;
 }
 .rotate-reset {
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  transition: .5s;
+  transition: .3s;
 }
 ol {
     list-style-type: none;
@@ -93,7 +92,6 @@ li {
 }
 div menuitem {
   padding: 8px 0;
-  font-family: Arial, Helvetica, sans-serif;
   width :100%;
   display: inline-block;
   vertical-align: middle;
@@ -120,3 +118,13 @@ menuitem:hover {
 .floatingmenu {
   position: relative;
 }
+
+div accordionhead {
+  padding: 0 15px;
+  width :100%;
+  display: inline-block;
+  vertical-align: middle;
+  background: #FFFFFF;
+  font-size: 30px;
+}
+
