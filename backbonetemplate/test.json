@@ -1,0 +1,16 @@
+{
+  "person": [
+    {
+      "fname": "Bugs",
+      "lname": "Bunny"
+    },
+    {
+      "fname": "Daffy",
+      "lname": "Duck"
+    },
+    {
+      "fname": "Mickey",
+      "lname": "Mouse"
+    }
+  ]
+}
